@@ -29,11 +29,8 @@
 				<td class="pull-right">
 					<span style="color: #808080"> DD/MM/YYYY </span> <span style="color: #808080"> HH:MM:SS</span><br>
 					<br>
-					<div class="pull-right">
-						<form  style="display:inline-block" action="" method="post">
-							<button type="submit" style="width:40%; height: 100%; border:none; background-color:white; color:#0099ff;" name="editButtom"><b>Edit<b></button>
-						</form>
-						<form style="display:inline-block" action="" method="post">
+					<div>
+						<form style="display:inline-block" action="" method="post" class="pull-right">
 							<button type="submit" style="width:40%; height: 100%; border:none; background-color:white; color:#009933" name="doneButtom"><b>Done<b></button>
 						</form>
 					</div>
