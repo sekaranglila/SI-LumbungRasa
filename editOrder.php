@@ -21,20 +21,23 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
-					<h2 class="fixedh2"> Input Order </h2> <br>
+				<div class="col-md-2">
+					<h2 class="fixedh2">Edit Order </h2>
+					<p class="menu"> DD/MM/YYYY HH:MM:SS </p> <br>
 				</div>
-				<div class="col-md-4">
-					<div class="pull-right"> <br>
-						<form class="form-horizontal">
-							<div class="form-group"> 
-								<label class="control-label col-sm-9" for="tab">Table : </label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control text-center" id="tab" placeholder="0">
-								</div>
+				<div class="col-md-10">
+					<form class="form-horizontal">
+						<div class="form-group"> <br>
+							<div class="col-sm-1">
+								<input type="text" class="form-control text-center" id="id_order" placeholder="#ID" disabled>
 							</div>
-						</form>
-					</div>
+							<div class="col-sm-9"> </div>
+							<label class="control-label col-sm-1" for="tab">Table : </label>
+							<div class="col-sm-1">
+								<input type="text" class="form-control text-center" id="tab" placeholder="5">
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -48,14 +51,14 @@
 							<label class="control-label col-sm-4" for="nasiputih">Nasi Putih</label>
 							<div class="col-sm-5"> </div>
 							<div class="col-sm-3">
-								<input type="text" class="form-control text-center" id="nasiputih" placeholder="0">
+								<input type="text" class="form-control text-center" id="nasiputih" placeholder="2">
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-sm-4" for="nasigurih">Nasi Gurih</label>
 							<div class="col-sm-5"> </div>
 							<div class="col-sm-3">
-								<input type="text" class="form-control text-center" id="nasigurih" placeholder="0">
+								<input type="text" class="form-control text-center" id="nasigurih" placeholder="3">
 							</div>
 						</div> 
 					</form> <br>
@@ -607,19 +610,19 @@
 						<div class="form-group">
 							<label class="control-label col-sm-9" for="ct11">Susu Jahe</label>
 							<div class="col-sm-3">
-								<input type="text" class="form-control text-center" id="ct11" placeholder="0">
+								<input type="text" class="form-control text-center" id="ct11" placeholder="2">
 							</div>
 						</div> 
 						<div class="form-group">
 							<label class="control-label col-sm-9" for="ct12">Yoghurt Strawberry</label>
 							<div class="col-sm-3">
-								<input type="text" class="form-control text-center" id="ct12" placeholder="0">
+								<input type="text" class="form-control text-center" id="ct12" placeholder="1">
 							</div>
 						</div> 
 						<div class="form-group">
 							<label class="control-label col-sm-9" for="ct13">Fruit Yoghurt</label>
 							<div class="col-sm-3">
-								<input type="text" class="form-control text-center" id="ct13" placeholder="0">
+								<input type="text" class="form-control text-center" id="ct13" placeholder="2">
 							</div>
 						</div> 
 					</form> <br> <br> <br>

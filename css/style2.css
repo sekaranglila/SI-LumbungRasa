@@ -29,7 +29,7 @@ body{
 }
 
 .menu{
-	color: green;
+	color:#808080;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -48,3 +48,21 @@ body{
 .form-control:-moz-placeholder { color: green; }
 .form-control::-moz-placeholder { color: green; }
 .form-control:-ms-input-placeholder { color: green; }
+
+#total_label{
+	font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+    font-size: 20px;
+	color: black;
+	text-align: right;
+}
+
+#total{
+    background-color: green;
+    color: white;
+}
+
+#total::-webkit-input-placeholder { color: white; }
+#total:-moz-placeholder { color: white; }
+#total::-moz-placeholder { color: white; }
+#total:-ms-input-placeholder { color: white; }
