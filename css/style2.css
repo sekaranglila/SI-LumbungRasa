@@ -1,0 +1,50 @@
+body{
+    height: 100%;
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar-default {
+    background-color: rgb(112, 173, 71);
+}
+
+.navbar-brand {
+    padding: 0px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+}
+
+.navbar-brand > img {
+    height: 110%;
+    width: auto; 
+}
+
+.fixedh2{
+    color: rgb(112, 77,30);
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+
+.menu{
+	color: green;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.form-control{
+    background-color: #E2F0D9;
+    color: green;
+}
+
+.form-horizontal .form-group .control-label{
+	color: green;
+    font-family: 'Quicksand', sans-serif;
+    text-align: left;
+}
+
+.form-control::-webkit-input-placeholder { color: green; }
+.form-control:-moz-placeholder { color: green; }
+.form-control::-moz-placeholder { color: green; }
+.form-control:-ms-input-placeholder { color: green; }

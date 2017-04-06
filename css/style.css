@@ -62,3 +62,12 @@ body{
     bottom: 10%;
     right: 20%; 
 }
+
+.container .fixedh2 h2{
+    color: rgb(112, 77,30);
+    font-family: 'Anton', sans-serif;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    letter-spacing: 2px;
+}
