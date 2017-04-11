@@ -44,3 +44,15 @@
 		</div>
 	</body>
 </html>
+<script type="text/javascript">
+    document.getElementById("fixedbutton").addEventListener('click', goAddOrder);
+    document.getElementByName("editButtom").addEventListener('click', goEditOrder);
+    
+    function goEditOrder(){
+        window.location = "http://localhost:90/SI-LumbungRasa/editOrder.php";
+    }
+    
+    function goAddOrder(){
+        window.location = "http://localhost:90/SI-LumbungRasa/addOrder.php";
+    }
+</script>    
