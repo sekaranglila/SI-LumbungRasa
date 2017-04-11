@@ -36,7 +36,7 @@ foreach($list_minuman as $minuman_val){
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-                                    <form class="form-horizontal" method="post" action ="./processOrder.php?XDEBUG_SESSION_START=netbeans-xdebug"  >
+                                    <form class="form-horizontal" method="post" action ="./reviewOrder.php?XDEBUG_SESSION_START=netbeans-xdebug"  >
                                         <div class="container">
                                                 <div class="row">
                                                         <div class="col-md-8">
@@ -63,14 +63,14 @@ foreach($list_minuman as $minuman_val){
                                             echo ("<div class=\"form-group\">".
 							"<label class=\"control-label col-sm-9\" for=\"".$name_for_id."\"> ".$name_for_display." </label>".
 							"<div class=\"col-sm-3\">".
-								"<input type=\"text\" class=\"form-control text-center\" name=\"".$name_for_id."\" placeholder=\"0\">".
+								"<input type=\"text\" class=\"form-control text-center\" id=\"".$name_for_id."\" name=\"".$name_for_id."\" placeholder=\"0\">".
 							"</div>".
 						"</div><br>");
                                         }
                                         ?>
                                         <div class="form-group">
                                             <label class="control-label" for="cat">Catatan : </label> <br>
-                                            <textarea class="form-control" rows="6" name="cat"></textarea>
+                                            <textarea class="form-control" rows="6" id="cat" name="cat"></textarea>
 					</div>
                                         <div class="pull-right">
                                             <button type="submit" class="btn btn-success">Next</button>

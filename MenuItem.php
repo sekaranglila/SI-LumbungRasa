@@ -70,7 +70,7 @@ class Makanan extends MenuItem{
     }
     
     public function get_id(){
-        return $id_db;
+        return $this->id_db;
     }
     
     public static function fetch_price($id){
@@ -86,9 +86,9 @@ class Makanan extends MenuItem{
     
     public static function count(){
         $conn = DBConnector::connect("root", "");
-        $result = $conn->query("SELECT count(id) FROM minuman");
+        $result = $conn->query("SELECT count(id) as cnt FROM makanan");
         $row = $result->fetch_assoc();
-        $count = $row[0];
+        $count = $row["cnt"];
         $conn->close();
         return $count;
     }
@@ -145,9 +145,9 @@ class Minuman extends MenuItem{
     
     public static function count(){
         $conn = DBConnector::connect("root", "");
-        $result = $conn->query("SELECT count(id) FROM minuman");
+        $result = $conn->query("SELECT count(id) as cnt FROM minuman");
         $row = $result->fetch_assoc();
-        $count = $row[0];
+        $count = $row["cnt"];
         $conn->close();
         return $count;
     }
@@ -159,5 +159,24 @@ class Minuman extends MenuItem{
         $new_minuman = new Minuman($row["id"], $row["nama"], $row["harga"], $row["deskripsi"]);
         $conn->close();
         return $new_minuman;        
+    }
+}
+
+//Quantified Menu Item
+class QMenuItem{
+    private $menuitem;
+    private $quantity;
+    
+    public function __construct($menuitem, $quantity) {
+        $this->menuitem = $menuitem;
+        $this->quantity = $quantity;
+    }
+    
+    public function get_item(){
+        return $this->menuitem;
+    }
+    
+    public function get_quantity(){
+        return $this->quantity;
     }
 }
