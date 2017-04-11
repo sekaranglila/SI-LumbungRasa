@@ -23,7 +23,7 @@ class MenuItem{
     }
     
    public function get_status(){
-       return MenuItem::status_keyword[$this->status_int];
+       return MenuItem::$status_keyword[$this->status_int];
    }
    
    public function get_deskripsi(){

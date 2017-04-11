@@ -60,41 +60,43 @@ $catatan = $_POST["cat"];
                                                     </div>
                                             </div-->  
                                             <?php
-                                            $food_list = $food_co->get_order_list();
-                                            $drink_list = $drink_co->get_order_list();
-                                            foreach($food_list as $food_value){
-                                                $name_for_id = $food_value->get_item()->get_id();
-                                                $name_for_display = $food_value->get_item()->get_deskripsi();
-                                                $qtt_for_display = $food_value->get_quantity();
-                                                echo("<div class=\"form-group\">".
-                                                        "<label class=\"control-label col-sm-4\" for=\"" .$name_for_id. "\">" .$name_for_display. "</label>".
-                                                        "<div class=\"col-sm-5\"> </div>".
-                                                        "<div class=\"col-sm-3\">".
-                                                                "<input type=\"text\" class=\"form-control text-center\" id=\"" .
-                                                                   $name_for_id. "\" name=\"" .$name_for_id. "\" value=\"".$qtt_for_display."\">".
+                                                $food_list = $food_co->get_order_list();
+                                                $drink_list = $drink_co->get_order_list();
+                                                foreach($food_list as $food_value){
+                                                    $name_for_id = $food_value->get_item()->get_id();
+                                                    $name_for_display = $food_value->get_item()->get_deskripsi();
+                                                    $qtt_for_display = $food_value->get_quantity();
+                                                    echo("<div class=\"form-group\">".
+                                                            "<label class=\"control-label col-sm-4\" for=\"" .$name_for_id. "\">" .$name_for_display. "</label>".
+                                                            "<div class=\"col-sm-5\"> </div>".
+                                                            "<div class=\"col-sm-3\">".
+                                                                    "<input type=\"text\" class=\"form-control text-center\" id=\"" .
+                                                                       $name_for_id. "\" name=\"" .$name_for_id. "\" value=\"".$qtt_for_display."\">".
 
-                                                        "</div>".
-                                                "</div>");
-                                            }
-                                            foreach ($drink_list as $drink_value){
-                                                $name_for_id = $drink_value->get_item()->get_id();
-                                                $name_for_display = $drink_value->get_item()->get_deskripsi();
-                                                $qtt_for_display =$drink_value->get_quantity();
-                                                echo("<div class=\"form-group\">".
-                                                        "<label class=\"control-label col-sm-9\" for=\"".$name_for_id."\"> ".$name_for_display." </label>".
-                                                        "<div class=\"col-sm-3\">".
-                                                                "<input type=\"text\" class=\"form-control text-center\" id=\"".
-                                                                    $name_for_id."\ name=\" ".$name_for_id." \" value=\"".$qtt_for_display."\">".
-                                                        "</div>".
-                                                "</div>" );
-                                            }
-                                        ?>
+                                                            "</div>".
+                                                    "</div>");
+                                                }
+                                                foreach ($drink_list as $drink_value){
+                                                    $name_for_id = $drink_value->get_item()->get_id();
+                                                    $name_for_display = $drink_value->get_item()->get_deskripsi();
+                                                    $qtt_for_display =$drink_value->get_quantity();
+                                                    echo("<div class=\"form-group\">".
+                                                            "<label class=\"control-label col-sm-9\" for=\"".$name_for_id."\"> ".$name_for_display." </label>".
+                                                            "<div class=\"col-sm-3\">".
+                                                                    "<input type=\"text\" class=\"form-control text-center\" id=\"".
+                                                                        $name_for_id."\" name=\"".$name_for_id."\" value=\"".$qtt_for_display."\">".
+                                                            "</div>".
+                                                    "</div>" );
+                                                }
+                                             ?>
                                         <div class="form-group">
                                                 <label class="control-label" for="cat">Catatan : </label> <br>
                                                 <textarea class="form-control" rows="6" id="cat" name="cat"><?php
                                                         echo $catatan;
                                                     ?></textarea>
                                         </div>
+                                        <input type ="hidden" name = "countfood" value ="<?php echo (count($food_list)) ?>">
+                                        <input type ="hidden" name = "countdrink" value ="<?php echo (count($drink_list)) ?>"> 
                                         <div>
                                             <button type="submit" class="btn btn-success btn-block">Save</button>
                                         </div>

@@ -31,7 +31,7 @@
 					<br>
 					<div class="pull-right">
 						<form  style="display:inline-block" action="" method="post">
-							<button type="submit" style="width:40%; height: 100%; border:none; background-color:white; color:#0099ff;" name="editButtom"><b>Edit<b></button>
+							<button type="submit" style="width:40%; height: 100%; border:none; background-color:white; color:#0099ff;" id = "editButton" name="editButtom"><b>Edit<b></button>
 						</form>
 						<form style="display:inline-block" action="" method="post">
 							<button type="submit" style="width:40%; height: 100%; border:none; background-color:white; color:#009933" name="doneButtom"><b>Done<b></button>
@@ -46,7 +46,7 @@
 </html>
 <script type="text/javascript">
     document.getElementById("fixedbutton").addEventListener('click', goAddOrder);
-    document.getElementByName("editButtom").addEventListener('click', goEditOrder);
+    document.getElementById("editButton").addEventListener('click', goEditOrder);
     
     function goEditOrder(){
         window.location = "http://localhost:90/SI-LumbungRasa/editOrder.php";
